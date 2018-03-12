@@ -1,0 +1,9 @@
+NOTE: Only the games with significant changes in their owners were included in this table.
+Actual number of total copies sold during the sale is bigger than shown below, because many games sold less than 5,000 copies and weren't accounted for!
+
+Games in these stats: 1356
+Average userscore: 78.56%
+Average metascore: 75.98%
+Total copies sold: 35,431,444
+Average price: $5.69
+Average discount: 59.41%
