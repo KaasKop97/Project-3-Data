@@ -33,6 +33,7 @@
             this.Help = new System.Windows.Forms.Button();
             this.Sub3 = new System.Windows.Forms.Button();
             this.Form2 = new System.Windows.Forms.Button();
+            this.Panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // Sub1
@@ -58,7 +59,7 @@
             // Help
             // 
             this.Help.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Help.Location = new System.Drawing.Point(1727, 915);
+            this.Help.Location = new System.Drawing.Point(12, 915);
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(68, 57);
             this.Help.TabIndex = 4;
@@ -78,19 +79,30 @@
             // 
             // Form2
             // 
-            this.Form2.Location = new System.Drawing.Point(499, 420);
+            this.Form2.Location = new System.Drawing.Point(12, 235);
             this.Form2.Name = "Form2";
-            this.Form2.Size = new System.Drawing.Size(111, 60);
+            this.Form2.Size = new System.Drawing.Size(164, 67);
             this.Form2.TabIndex = 6;
             this.Form2.Text = "Form2";
             this.Form2.UseVisualStyleBackColor = true;
             this.Form2.Click += new System.EventHandler(this.Form2_Click);
             // 
+            // Panel1
+            // 
+            this.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Panel1.Location = new System.Drawing.Point(197, 12);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(1598, 960);
+            this.Panel1.TabIndex = 7;
+            this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1807, 984);
+            this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Form2);
             this.Controls.Add(this.Sub3);
             this.Controls.Add(this.Help);
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button Help;
         private System.Windows.Forms.Button Sub3;
         private System.Windows.Forms.Button Form2;
+        private System.Windows.Forms.Panel Panel1;
     }
 }

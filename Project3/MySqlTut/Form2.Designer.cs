@@ -39,9 +39,9 @@
             this.lvPops.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmCountry_Name,
             this.clmCountry_Population});
-            this.lvPops.Location = new System.Drawing.Point(22, 12);
+            this.lvPops.Location = new System.Drawing.Point(24, 23);
             this.lvPops.Name = "lvPops";
-            this.lvPops.Size = new System.Drawing.Size(1128, 547);
+            this.lvPops.Size = new System.Drawing.Size(1551, 698);
             this.lvPops.TabIndex = 0;
             this.lvPops.UseCompatibleStateImageBehavior = false;
             this.lvPops.View = System.Windows.Forms.View.Details;
@@ -59,7 +59,7 @@
             // 
             // Loadtbl
             // 
-            this.Loadtbl.Location = new System.Drawing.Point(382, 609);
+            this.Loadtbl.Location = new System.Drawing.Point(652, 789);
             this.Loadtbl.Name = "Loadtbl";
             this.Loadtbl.Size = new System.Drawing.Size(364, 60);
             this.Loadtbl.TabIndex = 1;
@@ -71,9 +71,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 719);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(1598, 960);
             this.Controls.Add(this.Loadtbl);
             this.Controls.Add(this.lvPops);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Population";
             this.ResumeLayout(false);

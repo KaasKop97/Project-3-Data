@@ -20,5 +20,10 @@ namespace Project3
         {
 
         }
+
+        private void Form2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{875185B1-8FE0-4BEA-88A1-D30B0A0654A2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MySqlTut</RootNamespace>
-    <AssemblyName>MySqlTut</AssemblyName>
+    <RootNamespace>Project3</RootNamespace>
+    <AssemblyName>Project3</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -115,9 +115,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Sub1.resx">
       <DependentUpon>Sub1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sub2.resx">
+      <DependentUpon>Sub2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sub3.resx">
+      <DependentUpon>Sub3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
