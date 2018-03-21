@@ -95,5 +95,10 @@ namespace Project3
         {
 
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

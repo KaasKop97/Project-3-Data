@@ -41,7 +41,7 @@
             this.clmCountry_Population});
             this.lvPops.Location = new System.Drawing.Point(24, 23);
             this.lvPops.Name = "lvPops";
-            this.lvPops.Size = new System.Drawing.Size(1551, 698);
+            this.lvPops.Size = new System.Drawing.Size(999, 528);
             this.lvPops.TabIndex = 0;
             this.lvPops.UseCompatibleStateImageBehavior = false;
             this.lvPops.View = System.Windows.Forms.View.Details;
@@ -59,7 +59,7 @@
             // 
             // Loadtbl
             // 
-            this.Loadtbl.Location = new System.Drawing.Point(652, 789);
+            this.Loadtbl.Location = new System.Drawing.Point(309, 568);
             this.Loadtbl.Name = "Loadtbl";
             this.Loadtbl.Size = new System.Drawing.Size(364, 60);
             this.Loadtbl.TabIndex = 1;
@@ -72,7 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1598, 960);
+            this.ClientSize = new System.Drawing.Size(1049, 640);
             this.Controls.Add(this.Loadtbl);
             this.Controls.Add(this.lvPops);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

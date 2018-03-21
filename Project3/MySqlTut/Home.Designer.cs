@@ -59,7 +59,7 @@
             // Help
             // 
             this.Help.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Help.Location = new System.Drawing.Point(12, 915);
+            this.Help.Location = new System.Drawing.Point(12, 595);
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(68, 57);
             this.Help.TabIndex = 4;
@@ -92,7 +92,7 @@
             this.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Panel1.Location = new System.Drawing.Point(197, 12);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1598, 960);
+            this.Panel1.Size = new System.Drawing.Size(1049, 640);
             this.Panel1.TabIndex = 7;
             this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1807, 984);
+            this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Form2);
             this.Controls.Add(this.Sub3);
@@ -110,6 +110,7 @@
             this.Controls.Add(this.Sub1);
             this.Name = "Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
 
         }
