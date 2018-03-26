@@ -26,7 +26,7 @@ namespace Project_3.Helpers
             sqlConnBuilder.Port = 3306;
             sqlConnBuilder.UserID = "test";
             sqlConnBuilder.Password = "test";
-            sqlConnBuilder.Database = "memes";
+            sqlConnBuilder.Database = "project3";
             try
             {
                 sqlConn = new MySqlConnection(sqlConnBuilder.ConnectionString);

@@ -23,10 +23,10 @@ namespace Project_3
             label1.Text = "";
             label1.ForeColor = Color.Red;
             DbHelper dbhelper = new DbHelper();
-            DataTable datasource = dbhelper.SelectFromDb("SELECT * FROM " + textBox1.Text);
+            DataTable datasource = dbhelper.SelectFromDb(textBox1.Text);
             if(datasource.Rows.Count == 0)
             {
-                label1.Text = "ERROR: table does not exist.";
+                label1.Text = "ERROR: Somethings wrong.";
             }
             dataGridView1.DataSource = datasource;
         }
