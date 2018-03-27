@@ -31,8 +31,8 @@ namespace Project_3
             {
                 chart1.Series["Online Purchases"].Points.AddXY(0, dr["oky"]);
                 chart1.Series["Median Income"].Points.AddXY(0, dr["miy"]);
-                Console.WriteLine(dr["oky"]);
-                Console.WriteLine(dr["miy"]);
+                Console.WriteLine("oky " + dr["oky"]);
+                Console.WriteLine("miy " + dr["miy"]);
             }
         }
 
@@ -60,6 +60,16 @@ namespace Project_3
         {
             ClearChart();
             FillChart(Convert.ToInt32(comboBox1.SelectedValue));
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

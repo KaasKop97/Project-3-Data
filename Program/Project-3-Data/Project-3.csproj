@@ -63,6 +63,7 @@
     <Compile Include="debug.Designer.cs">
       <DependentUpon>debug.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DBcon.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

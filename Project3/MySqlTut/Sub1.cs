@@ -1,67 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Project_3.Helpers;
 
-namespace Project3
+namespace Project_3
 {
-    public partial class Sub1 : Form
+    public partial class Subgroep1 : Form
     {
         private DbHelper dbHelp = new DbHelper();
-
-        public Sub1()
+        public Subgroep1()
         {
             InitializeComponent();
             FillDropDown();
-            FillChart();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Memes!");
-        }
-
-        private void FillChart(int year = 0)
+        public void FillChart(int year = 0)
         {
             //At first we show all the data we currently have.
-            string sqlCommand = "SELECT Online_Purchases, Median_Income FROM koelman";
+            string yearForDb = "y" + year;
+            string sqlCommand = "SELECT * FROM Co_modaal_inkomen, Co_online_kopen_percentage";
             if (year != 0)
             {
-                sqlCommand = "SELECT Online_Purchases, Median_Income FROM koelman WHERE Year = " + year.ToString();
+                sqlCommand = "SELECT mi.land_naam as ln, mi." + yearForDb + " as miy, ok." + yearForDb + " as oky FROM Co_modaal_inkomen as mi, Co_online_kopen_percentage as ok WHERE mi.land_naam = ok.land_naam";
             }
 
             var dataFromDb = dbHelp.SelectFromDb(sqlCommand);
             foreach (DataRow dr in dataFromDb.Rows)
             {
-                chart1.Series["Online Purchases"].Points.AddXY(0, dr["Online_Purchases"]);
-                chart1.Series["Median Income"].Points.AddXY(0, dr["Median_Income"]);
+                chart1.Series["Online Purchases"].Points.AddXY(0, dr["oky"]);
+                chart1.Series["Median Income"].Points.AddXY(0, dr["miy"]);
+                Console.WriteLine(dr["oky"]);
+                Console.WriteLine(dr["miy"]);
             }
         }
 
-        private void FillDropDown()
+        public void FillDropDown()
         {
-            var dataFromDb = dbHelp.SelectFromDb("SELECT Year FROM koelman ORDER BY Year DESC");
             var dataSource = new List<int>();
 
-            foreach (DataRow dr in dataFromDb.Rows)
+            IEnumerable<int> years = Enumerable.Range(2008, 10);
+            foreach (int year in years)
             {
-                dataSource.Add(Convert.ToInt32(dr["Year"]));
+                dataSource.Add(year);
             }
-            dataSource.Add(0); //DEBUG for now, this resets the charts to show all the years.
+            dataSource.Add(0); //DEBUG for now, adding the 0 resets the charts to show all the years.
             comboBox1.DataSource = dataSource;
         }
 
-        private void ClearChart()
+        public void ClearChart()
         {
             chart1.Series["Online Purchases"].Points.Clear();
             chart1.Series["Median Income"].Points.Clear();
@@ -72,7 +60,6 @@ namespace Project3
         {
             ClearChart();
             FillChart(Convert.ToInt32(comboBox1.SelectedValue));
-            Console.WriteLine("Nigge");
         }
     }
 }
