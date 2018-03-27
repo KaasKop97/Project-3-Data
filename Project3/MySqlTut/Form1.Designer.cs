@@ -28,173 +28,219 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lvUsers = new System.Windows.Forms.ListView();
-            this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmPassword = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnLoadAll = new System.Windows.Forms.Button();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lvUsers
+            // comboBox1
             // 
-            this.lvUsers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clmId,
-            this.clmUsername,
-            this.clmPassword});
-            this.lvUsers.FullRowSelect = true;
-            this.lvUsers.Location = new System.Drawing.Point(12, 18);
-            this.lvUsers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lvUsers.MultiSelect = false;
-            this.lvUsers.Name = "lvUsers";
-            this.lvUsers.Size = new System.Drawing.Size(804, 259);
-            this.lvUsers.TabIndex = 0;
-            this.lvUsers.UseCompatibleStateImageBehavior = false;
-            this.lvUsers.View = System.Windows.Forms.View.Details;
-            this.lvUsers.SelectedIndexChanged += new System.EventHandler(this.lvUsers_SelectedIndexChanged);
+            this.comboBox1.AccessibleDescription = "";
+            this.comboBox1.AllowDrop = true;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Belgium",
+            "Bulgaria",
+            "Czech Republic",
+            "Denmark",
+            "Germany",
+            "Estonia",
+            "Ireland",
+            "Greece",
+            "Spain",
+            "France",
+            "Croatia",
+            "Italy",
+            "Cyprus",
+            "Latvia",
+            "Lithuania",
+            "Luxembourg",
+            "Hungary",
+            "Malta",
+            "Netherlands",
+            "Austria",
+            "Poland",
+            "Portugal",
+            "Romania",
+            "Slovenia",
+            "Slovakia",
+            "Finland",
+            "Sweden",
+            "United Kingdom",
+            "Iceland",
+            "Norway",
+            "Switzerland",
+            "Former Yugoslav Republic of Macedonia, the",
+            "Serbia",
+            "Turkey"});
+            this.comboBox1.Location = new System.Drawing.Point(861, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(174, 24);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Kies een Land";
             // 
-            // clmId
+            // comboBox2
             // 
-            this.clmId.Text = "Id";
-            this.clmId.Width = 49;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017"});
+            this.comboBox2.Location = new System.Drawing.Point(861, 99);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(174, 24);
+            this.comboBox2.TabIndex = 1;
+            this.comboBox2.Text = "Kies een jaar";
             // 
-            // clmUsername
+            // comboBox4
             // 
-            this.clmUsername.Text = "Username";
-            this.clmUsername.Width = 120;
+            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Belgium",
+            "Bulgaria",
+            "Czech Republic",
+            "Denmark",
+            "Germany",
+            "Estonia",
+            "Ireland",
+            "Greece",
+            "Spain",
+            "France",
+            "Croatia",
+            "Italy",
+            "Cyprus",
+            "Latvia",
+            "Lithuania",
+            "Luxembourg",
+            "Hungary",
+            "Malta",
+            "Netherlands",
+            "Austria",
+            "Poland",
+            "Portugal",
+            "Romania",
+            "Slovenia",
+            "Slovakia",
+            "Finland",
+            "Sweden",
+            "United Kingdom",
+            "Iceland",
+            "Norway",
+            "Switzerland",
+            "Former Yugoslav Republic of Macedonia, the",
+            "Serbia",
+            "Turkey"});
+            this.comboBox4.Location = new System.Drawing.Point(861, 296);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(174, 24);
+            this.comboBox4.TabIndex = 3;
+            this.comboBox4.Text = "Kies het tweede land";
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
-            // clmPassword
+            // button1
             // 
-            this.clmPassword.Text = "Password";
-            this.clmPassword.Width = 141;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Location = new System.Drawing.Point(870, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 42);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Maak het stafdiagram ";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // textBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 294);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Id:";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(800, 217);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(306, 45);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "Om tussen twee landen te vergelijken kieze het andere land op de dropdown menu da" +
+    "ar onder ";
             // 
-            // label2
+            // chart1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 334);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Username:";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(784, 457);
+            this.chart1.TabIndex = 7;
+            this.chart1.Text = "chart1";
             // 
-            // label3
+            // comboBox3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 374);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Password:";
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017"});
+            this.comboBox3.Location = new System.Drawing.Point(861, 344);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(174, 24);
+            this.comboBox3.TabIndex = 8;
+            this.comboBox3.Text = "Kies het tweede jaar ";
             // 
-            // btnLoadAll
+            // button2
             // 
-            this.btnLoadAll.Location = new System.Drawing.Point(22, 503);
-            this.btnLoadAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLoadAll.Name = "btnLoadAll";
-            this.btnLoadAll.Size = new System.Drawing.Size(112, 35);
-            this.btnLoadAll.TabIndex = 4;
-            this.btnLoadAll.Text = "Load all";
-            this.btnLoadAll.UseVisualStyleBackColor = true;
-            this.btnLoadAll.Click += new System.EventHandler(this.btnLoadAll_Click);
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.Location = new System.Drawing.Point(144, 503);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(112, 35);
-            this.btnInsert.TabIndex = 5;
-            this.btnInsert.Text = "Insert";
-            this.btnInsert.UseVisualStyleBackColor = true;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(266, 503);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(112, 35);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(111, 289);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(346, 26);
-            this.txtId.TabIndex = 7;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(111, 329);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtUsername.MaxLength = 20;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(346, 26);
-            this.txtUsername.TabIndex = 8;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(111, 369);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPassword.MaxLength = 20;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(346, 26);
-            this.txtPassword.TabIndex = 9;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(387, 503);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(112, 35);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(870, 390);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(153, 42);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Maak het stafdiagram ";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 664);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.btnLoadAll);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lvUsers);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ClientSize = new System.Drawing.Size(1118, 531);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,20 +248,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lvUsers;
-        private System.Windows.Forms.ColumnHeader clmId;
-        private System.Windows.Forms.ColumnHeader clmUsername;
-        private System.Windows.Forms.ColumnHeader clmPassword;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnLoadAll;
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button2;
     }
 }
 
