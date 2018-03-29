@@ -43,11 +43,11 @@ namespace Project_3.Helpers
         public DataTable SelectFromDb(string query)
         {
             //Escaping characters and such..
-            string cleanQuery = MySqlHelper.EscapeString(query);
+            //string cleanQuery = MySqlHelper.EscapeString(query);
             DataTable dataTable = new DataTable();
             try
             {
-                MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(cleanQuery, sqlConn);
+                MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(query, sqlConn);
                 sqlDataAdapter.SelectCommand.CommandType = CommandType.Text;
                 sqlDataAdapter.Fill(dataTable);
             }

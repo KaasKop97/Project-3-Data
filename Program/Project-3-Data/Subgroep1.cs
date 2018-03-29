@@ -13,40 +13,62 @@ namespace Project_3
         public Subgroep1()
         {
             InitializeComponent();
-            FillDropDown();
+            FillDropDowns();
         }
 
-        public void FillChart(int year = 0)
+        public void FillChart(string country = "", int year = 0)
         {
             //At first we show all the data we currently have.
             string yearForDb = "y" + year;
             string sqlCommand = "SELECT * FROM Co_modaal_inkomen, Co_online_kopen_percentage";
-            if(year != 0)
+            if (year != 0 && country.Length != 0)
             {
-                sqlCommand = "SELECT mi.land_naam as ln, mi." + yearForDb + " as miy, ok." + yearForDb + " as oky FROM Co_modaal_inkomen as mi, Co_online_kopen_percentage as ok WHERE mi.land_naam = ok.land_naam";
+                sqlCommand = 
+                    "SELECT mi.land_naam as Country_Name, mi." + yearForDb + " as Modaal_Inkomen, okp." + yearForDb + " as Online_Kopen " +
+                    "FROM Co_modaal_inkomen as mi, Co_online_kopen_percentage as okp " +
+                    "WHERE mi.land_naam = '" + country + "' AND mi.land_naam = okp.land_naam";
             }
 
             var dataFromDb = dbHelp.SelectFromDb(sqlCommand);
             foreach(DataRow dr in dataFromDb.Rows)
             {
-                chart1.Series["Online Purchases"].Points.AddXY(0, dr["oky"]);
-                chart1.Series["Median Income"].Points.AddXY(0, dr["miy"]);
-                Console.WriteLine("oky " + dr["oky"]);
-                Console.WriteLine("miy " + dr["miy"]);
+                try
+                {
+                    var properValue = Convert.ToInt32(dr["Online_Kopen"]) * Convert.ToInt32(dr["Modaal_Inkomen"]) / 100;
+                    chart1.Series["Online Purchases"].Points.AddXY(0, properValue);
+                    chart1.Series["Online Purchases"].Label = properValue.ToString();
+                    chart1.Series["Median Income"].Points.AddXY(0, dr["Modaal_Inkomen"]);
+                    chart1.Series["Median Income"].Label = dr["Modaal_Inkomen"].ToString();
+                }
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine("!!!ERROR: " + e.ToString());
+                    throw;
+                }
+                
             }
         }
 
-        public void FillDropDown()
+        public void FillDropDowns()
         {
-            var dataSource = new List<int>();
+            var dataSourceYears = new List<int>();
+            var dataSourceCountries = new List<string>();
 
             IEnumerable<int> years = Enumerable.Range(2008, 10);
             foreach(int year in years)
             {
-                dataSource.Add(year);
+                dataSourceYears.Add(year);
             }
-            dataSource.Add(0); //DEBUG for now, adding the 0 resets the charts to show all the years.
-            comboBox1.DataSource = dataSource;
+            comboBox2.DataSource = dataSourceYears;
+            comboBox4.DataSource = dataSourceYears;
+
+            var countriesFromDb = dbHelp.SelectFromDb("SELECT land_naam FROM Co_modaal_inkomen");
+            foreach(DataRow country in countriesFromDb.Rows)
+            {
+                dataSourceCountries.Add(country["land_naam"].ToString());
+            }
+            comboBox1.DataSource = dataSourceCountries;
+            comboBox3.DataSource = dataSourceCountries;
         }
 
         public void ClearChart()
@@ -58,8 +80,8 @@ namespace Project_3
         //Here we're going to handle when years are changed in the dropdown menu.
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ClearChart();
-            FillChart(Convert.ToInt32(comboBox1.SelectedValue));
+            //ClearChart();
+            //FillChart(Convert.ToInt32(comboBox1.SelectedValue));
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,6 +92,16 @@ namespace Project_3
         private void chart2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex.ToString() != "" && comboBox2.SelectedIndex.ToString() != "")
+            {
+                ClearChart();
+                Console.WriteLine(comboBox1.SelectedValue.ToString());
+                FillChart(comboBox1.SelectedValue.ToString(), Convert.ToInt32(comboBox2.SelectedValue));
+            }
         }
     }
 }
