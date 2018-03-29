@@ -16,7 +16,7 @@ namespace Project_3
             FillDropDowns();
         }
 
-        public void FillChart(string country = "", int year = 0)
+        public void FillChart(string country, int year, System.Windows.Forms.DataVisualization.Charting.Chart chartName)
         {
             //At first we show all the data we currently have.
             string yearForDb = "y" + year;
@@ -35,10 +35,10 @@ namespace Project_3
                 try
                 {
                     var properValue = Convert.ToInt32(dr["Online_Kopen"]) * Convert.ToInt32(dr["Modaal_Inkomen"]) / 100;
-                    chart1.Series["Online Purchases"].Points.AddXY(0, properValue);
-                    chart1.Series["Online Purchases"].Label = properValue.ToString();
-                    chart1.Series["Median Income"].Points.AddXY(0, dr["Modaal_Inkomen"]);
-                    chart1.Series["Median Income"].Label = dr["Modaal_Inkomen"].ToString();
+                    chartName.Series["Online Purchases"].Points.AddXY(0, properValue);
+                    chartName.Series["Online Purchases"].Label = properValue.ToString();
+                    chartName.Series["Median Income"].Points.AddXY(0, dr["Modaal_Inkomen"]);
+                    chartName.Series["Median Income"].Label = dr["Modaal_Inkomen"].ToString();
                 }
                 catch (ArgumentException e)
                 {
@@ -60,7 +60,7 @@ namespace Project_3
                 dataSourceYears.Add(year);
             }
             comboBox2.DataSource = dataSourceYears;
-            comboBox4.DataSource = dataSourceYears;
+            comboBox3.DataSource = dataSourceYears;
 
             var countriesFromDb = dbHelp.SelectFromDb("SELECT land_naam FROM Co_modaal_inkomen");
             foreach(DataRow country in countriesFromDb.Rows)
@@ -68,13 +68,13 @@ namespace Project_3
                 dataSourceCountries.Add(country["land_naam"].ToString());
             }
             comboBox1.DataSource = dataSourceCountries;
-            comboBox3.DataSource = dataSourceCountries;
+            comboBox4.DataSource = dataSourceCountries;
         }
 
-        public void ClearChart()
+        public void ClearChart(System.Windows.Forms.DataVisualization.Charting.Chart chartName)
         {
-            chart1.Series["Online Purchases"].Points.Clear();
-            chart1.Series["Median Income"].Points.Clear();
+            chartName.Series["Online Purchases"].Points.Clear();
+            chartName.Series["Median Income"].Points.Clear();
         }
 
         //Here we're going to handle when years are changed in the dropdown menu.
@@ -89,18 +89,21 @@ namespace Project_3
 
         }
 
-        private void chart2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex.ToString() != "" && comboBox2.SelectedIndex.ToString() != "")
             {
-                ClearChart();
-                Console.WriteLine(comboBox1.SelectedValue.ToString());
-                FillChart(comboBox1.SelectedValue.ToString(), Convert.ToInt32(comboBox2.SelectedValue));
+                ClearChart(chart1);
+                FillChart(comboBox1.SelectedValue.ToString(), Convert.ToInt32(comboBox2.SelectedValue), chart1);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox3.SelectedIndex.ToString() != "" && comboBox4.SelectedIndex.ToString() != "")
+            {
+                ClearChart(chart2);
+                FillChart(comboBox4.SelectedValue.ToString(), Convert.ToInt32(comboBox3.SelectedValue), chart2);
             }
         }
     }
