@@ -52,23 +52,27 @@ namespace Project_3
         public void FillDropDowns()
         {
             var dataSourceYears = new List<int>();
+            var dataSourceYears2 = new List<int>();
             var dataSourceCountries = new List<string>();
+            var dataSourceCountries2 = new List<string>();
 
             IEnumerable<int> years = Enumerable.Range(2008, 10);
             foreach(int year in years)
             {
                 dataSourceYears.Add(year);
+                dataSourceYears2.Add(year);
             }
             comboBox2.DataSource = dataSourceYears;
-            comboBox3.DataSource = dataSourceYears;
+            comboBox3.DataSource = dataSourceYears2;
 
             var countriesFromDb = dbHelp.SelectFromDb("SELECT land_naam FROM Co_modaal_inkomen");
             foreach(DataRow country in countriesFromDb.Rows)
             {
                 dataSourceCountries.Add(country["land_naam"].ToString());
+                dataSourceCountries2.Add(country["land_naam"].ToString());
             }
             comboBox1.DataSource = dataSourceCountries;
-            comboBox4.DataSource = dataSourceCountries;
+            comboBox4.DataSource = dataSourceCountries2;
         }
 
         public void ClearChart(System.Windows.Forms.DataVisualization.Charting.Chart chartName)
