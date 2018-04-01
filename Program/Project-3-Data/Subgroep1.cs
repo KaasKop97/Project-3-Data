@@ -84,13 +84,10 @@ namespace Project_3
         //Here we're going to handle when years are changed in the dropdown menu.
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //ClearChart();
-            //FillChart(Convert.ToInt32(comboBox1.SelectedValue));
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
