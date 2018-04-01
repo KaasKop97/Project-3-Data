@@ -7,7 +7,7 @@ namespace Project_3
     public partial class Project3Data : Form
     {
         private Subgroep1 sg1;
-        private Subgroep2 sg2;
+        private Subgroep2.Subgroep2 sg2;
         private Subgroep3 sg3;
         private debug debug;
         public Project3Data()
@@ -42,7 +42,7 @@ namespace Project_3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            sg2 = new Subgroep2();
+            sg2 = new Subgroep2.Subgroep2();
             this.LoadIntoPanel(sg2);
         }
 

@@ -79,12 +79,6 @@
     <Compile Include="Subgroep1.Designer.cs">
       <DependentUpon>Subgroep1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Subgroep2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Subgroep2.Designer.cs">
-      <DependentUpon>Subgroep2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Subgroep3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +103,6 @@
     </Compile>
     <EmbeddedResource Include="Subgroep1.resx">
       <DependentUpon>Subgroep1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Subgroep2.resx">
-      <DependentUpon>Subgroep2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subgroep3.resx">
       <DependentUpon>Subgroep3.cs</DependentUpon>
