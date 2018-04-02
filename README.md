@@ -18,4 +18,4 @@ Groep 1: wat is het percentage van mensen die online spullen kopen in vergelijki
 
 Groep 2: Hoe is het aantal actieve gamers afhankelijk van aantal inwoners in een land.
 
-Groep 3: Worden meer games gekocht tijdens de feestdagen afhankelijk van het weer.
+Groep 3: Wat is het verband tussen gebruikers van Steam en de beschikbare games betreffend hun genres?

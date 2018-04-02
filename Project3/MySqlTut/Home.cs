@@ -17,45 +17,39 @@ namespace Project3
         public Home()
         {
             InitializeComponent();
+        }
 
-
+        private void LoadFrame(Form stuff)
+        {
+            Panel1.Controls.Clear();
+            stuff.TopLevel = false;
+            Panel1.Controls.Add(stuff);
+            stuff.Show();
         }
 
         private void Loadsub1()
         {
-            Panel1.Controls.Clear();
             Sub1 sub1 = new Sub1();
-            sub1.TopLevel = false;
-            Panel1.Controls.Add(sub1);
-            sub1.Show();
+            this.LoadFrame(sub1);
 
         }
 
         private void Loadsub2()
         {
-            Panel1.Controls.Clear();
             Sub2 sub2 = new Sub2();
-            sub2.TopLevel = false;
-            Panel1.Controls.Add(sub2);
-            sub2.Show();
+            this.LoadFrame(sub2);
         }
 
         private void Loadsub3()
         {
-            Panel1.Controls.Clear();
             Sub3 sub3 = new Sub3();
-            sub3.TopLevel = false;
-            Panel1.Controls.Add(sub3);
-            sub3.Show();
+            this.LoadFrame(sub3);
         }
 
         private void Loadhelp()
         {
-            Panel1.Controls.Clear();
-            Help hlp = new Help();
-            hlp.TopLevel = false;
-            Panel1.Controls.Add(hlp);
-            hlp.Show();
+            Help help = new Help();
+            this.LoadFrame(help);
         }
 
         private void Sub1_Click_1(object sender, EventArgs e)
@@ -88,10 +82,14 @@ namespace Project3
             frm2.TopLevel = false;
             Panel1.Controls.Add(frm2);
             frm2.Show();
-
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
         {
 
         }
