@@ -1,0 +1,19 @@
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\bin\Debug\MySqlTut.exe
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\bin\Debug\MySqlTut.pdb
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\bin\Debug\MySql.Data.dll
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\obj\Debug\MySqlTut.csprojResolveAssemblyReference.cache
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\obj\Debug\MySqlTut.Form1.resources
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\obj\Debug\MySqlTut.Properties.Resources.resources
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\obj\Debug\MySqlTut.csproj.GenerateResource.Cache
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\obj\Debug\MySqlTut.exe
+c:\users\matthias\documents\visual studio 2013\Projects\MySqlTut\MySqlTut\obj\Debug\MySqlTut.pdb
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\bin\Debug\MySqlTut.exe
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\bin\Debug\MySqlTut.pdb
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.Form1.resources
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.Properties.Resources.resources
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.csproj.CopyComplete
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.exe
+C:\Users\Admin\Desktop\MySqlTut\MySqlTut\obj\Debug\MySqlTut.pdb
