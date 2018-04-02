@@ -73,28 +73,36 @@
     <Compile Include="Helpers\DbHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subgroep2\FilterSub2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subgroep2\FilterSub2.Designer.cs">
+      <DependentUpon>FilterSub2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subgroep2\Sub2totpldtm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subgroep2\Sub2totpldtm.Designer.cs">
+      <DependentUpon>Sub2totpldtm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subgroep2\Sub2activegamers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subgroep2\Sub2activegamers.Designer.cs">
+      <DependentUpon>Sub2activegamers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Subgroep1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Subgroep1.Designer.cs">
       <DependentUpon>Subgroep1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Subgroep2-2\FilterSub2.cs">
+    <Compile Include="Subgroep2\Subgroep2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Subgroep2-2\FilterSub2.Designer.cs" />
-    <Compile Include="Subgroep2-2\Sub2activegamers.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Subgroep2\Subgroep2.Designer.cs">
+      <DependentUpon>Subgroep2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Subgroep2-2\Sub2activegamers.Designer.cs" />
-    <Compile Include="Subgroep2-2\Sub2totpldtm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Subgroep2-2\Sub2totpldtm.Designer.cs" />
-    <Compile Include="Subgroep2-2\Subgroep2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Subgroep2-2\Subgroep2.Designer.cs" />
     <Compile Include="Subgroep3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,10 +128,18 @@
     <EmbeddedResource Include="Subgroep1.resx">
       <DependentUpon>Subgroep1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Subgroep2-2\FilterSub2.resx" />
-    <EmbeddedResource Include="Subgroep2-2\Sub2activegamers.resx" />
-    <EmbeddedResource Include="Subgroep2-2\Sub2totpldtm.resx" />
-    <EmbeddedResource Include="Subgroep2-2\Subgroep2.resx" />
+    <EmbeddedResource Include="Subgroep2\FilterSub2.resx">
+      <DependentUpon>FilterSub2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subgroep2\Sub2activegamers.resx">
+      <DependentUpon>Sub2activegamers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subgroep2\Sub2totpldtm.resx">
+      <DependentUpon>Sub2totpldtm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subgroep2\Subgroep2.resx">
+      <DependentUpon>Subgroep2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Subgroep3.resx">
       <DependentUpon>Subgroep3.cs</DependentUpon>
     </EmbeddedResource>

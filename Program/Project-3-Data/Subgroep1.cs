@@ -107,5 +107,10 @@ namespace Project_3
                 FillChart(comboBox4.SelectedValue.ToString(), Convert.ToInt32(comboBox3.SelectedValue), chart2);
             }
         }
+
+        private void Subgroep1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
