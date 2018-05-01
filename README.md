@@ -1,9 +1,5 @@
 Project 3 - Data Visualization
 -
-Discord:
-
-https://discord.gg/ueGMMPZ
-
 Subteams
 -
 Groep 1: Malaz en Mitchel
